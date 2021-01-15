@@ -9,7 +9,7 @@
 */
 
 //CODE HERE
-
+let myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -37,7 +37,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+const animals = [...forest, ...ocean, ...savannah, ...desert]
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +45,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const animalsCopy = [...animals, 'elephant']
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,7 +56,15 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let compareNums = (num1, num2) => (num1 < num2) ? num2 : num1
 
+// let compareNums = (num1, num2) => {
+//     if (num1 < num2){
+//         return num2
+//     } else {
+//         return num1
+//     }
+// }
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +76,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  const bestMovie = (movie) => `Sharknado is the best movie ever!`
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,7 +84,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  const jsNinja = () => `I am a JavaScript ninja!`
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +105,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  delete gameInfo.rating
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,7 +127,11 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  for (let key in shapes){
+    if (shapes[key] % 2 !== 0){
+          shapes.splice(0, 1)
+      } 
+  }
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -161,6 +173,16 @@ const classes = [
 */
 
 //CODE HERE
+for (let i = 0; i <= classes.length; i++){
+    for (let key in classes){
+        classes.forEach(function(elem, ind, arr){
+            if (elem[key] === true){
+                elem[key] = false
+            }
+        })
+    }
+}
+
 
   
 ////////////////////PROBLEM 10////////////////////

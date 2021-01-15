@@ -36,7 +36,12 @@ let foods = [
 */
 
 //CODE HERE
-
+// foods.forEach(function(elem, ind, arr){
+//   let calories = 
+//   carbs *= 4,
+//   protein *= 4,
+//   fat *= 9
+// })
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,7 +86,9 @@ const products = [
 */
 
 //CODE HERE
-
+// products.map(function(elem, ind, arr){
+//   price -= (price * .25)
+// })
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -251,7 +258,30 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let person = {
+  name: 'Josh',
+  age: 29,
+  jobs: ['warrior', 'healer', 'tank'],
+  birthday: function(){
+    return (this.age += 1)
+  },
+  favorites: {
+    color: 'black',
+    number: 3,
+    book: 'Naruto',
+  },
+  kids: [
+    {
+      name: 'Bruce',
+      age: 1
+    },
+    {
+      name: 'Wayne',
+      age: 4
+    }
+  ]
+  
+}
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
   For the last two problems, you will be determining the 
@@ -273,10 +303,10 @@ const workout = {
   },
 }
 
-//let context1 = myFunc
+// let context1 = myFunc
 //let context1 = window
-//let context1 = global
-// let context1 = workout
+// let context1 = global
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -288,7 +318,7 @@ function myFunc() {
   return this
 }
 
-//let context2 = myFunc
-// let context2 = window
+// let context2 = myFunc
+let context2 = window
 //let context2 = global
 //let context2 = workout
