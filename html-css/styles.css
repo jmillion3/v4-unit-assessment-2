@@ -12,3 +12,169 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+body {
+	margin: 0;
+	font-family: 'Nunito', sans-serif;
+	height: 80vh;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* * HEADER */
+header {
+	height: 7vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: rgb(37, 37, 37);
+	color: white;
+}
+
+h1 {
+	font-weight: 400;
+	color: rgb(42, 171, 226);
+}
+
+ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+header li {
+	width: 100px;
+	list-style-type: none;
+}
+
+header a {
+	color: white;
+}
+
+.links {
+	width: 30vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* ! MAIN */
+main {
+	margin: 0 5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+main a {
+	color: black;
+}
+
+main > section {
+	margin: 3% 3%;
+}
+
+.imagesTop {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.imagesBottom {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.gallery img {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	padding: 0 20px;
+	margin: 2% 0;
+}
+
+/* ! SIDEBAR */
+.sidebar {
+	position: relative;
+	display: block;
+	width: 200px;
+	box-sizing: border-box;
+	/* border: 5px solid green; */
+}
+
+.sidebar > div {
+	box-shadow: 0 0 9px rgba(102, 75, 75, .3);
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	border-radius: 5%;
+}
+
+.container {
+	width: 130px;
+	height: 130px;
+	border: solid 5px black;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.head {
+	width: 50px;
+	height: 50px;
+	border: solid 5px black;
+	border-radius: 50%;
+}
+
+.body {
+	width: 80px;
+	height: 80px;
+	border: solid 5px black;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+ol {
+	padding: 0 10%;
+	width: 300px;
+}
+
+li {
+	font-size: .8em;
+	line-height: 2;
+}
+
+/* ? FOOTER */
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	bottom: 0;
+	padding: 0 2%;
+	background-color: rgb(42, 171, 226);
+}
+
+.question {
+	height: 30px;
+	width: 30px;
+	position: fixed;
+	right: 10px;
+	bottom: 0;
+	margin: 5px 0;
+	background-color: rgb(42, 171, 226);
+	border: 4px solid black;
+	border-radius: 50%;
+	font-size: 1.5em;
+	text-align: center;
+}
