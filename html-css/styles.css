@@ -16,6 +16,7 @@ body {
 	margin: 0;
 	font-family: 'Nunito', sans-serif;
 	height: 80vh;
+	width: 99vw;
 }
 
 a {
@@ -26,6 +27,8 @@ a {
 header {
 	height: 7vh;
 	width: 100%;
+	position: fixed;
+	z-index: 4;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -63,6 +66,8 @@ header a {
 /* ! MAIN */
 main {
 	margin: 0 5%;
+	position: relative;
+	top: 10%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -72,6 +77,10 @@ main a {
 }
 
 main > section {
+	margin: 3% 3%;
+}
+
+aside {
 	margin: 3% 3%;
 }
 
@@ -88,8 +97,8 @@ main > section {
 }
 
 .gallery img {
-	height: 100px;
-	width: 100px;
+	height: auto;
+	width: 10vw;
 	border: 2px solid black;
 	padding: 0 20px;
 	margin: 2% 0;
@@ -129,21 +138,6 @@ main > section {
 	align-items: center;
 }
 
-.head {
-	width: 50px;
-	height: 50px;
-	border: solid 5px black;
-	border-radius: 50%;
-}
-
-.body {
-	width: 80px;
-	height: 80px;
-	border: solid 5px black;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
 ol {
 	padding: 0 10%;
 	width: 300px;
@@ -156,10 +150,11 @@ li {
 
 /* ? FOOTER */
 footer {
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	padding: 0 2%;
 	background-color: rgb(42, 171, 226);
