@@ -36,12 +36,14 @@ let foods = [
 */
 
 //CODE HERE
-// foods.forEach(function(elem, ind, arr){
-//   let calories = 
-//   carbs *= 4,
-//   protein *= 4,
-//   fat *= 9
-// })
+// function calories(cal){
+//   return (carbs *= 4) + (protein *= 4) + (fat *= 9)
+// }
+// let calories = foods.push(function (obj){
+//   obj.forEach((elem, ind, arr) => {
+//     return(carbs *= 4) + (protein *= 4) + (fat *= 9)
+//   })
+// }
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -86,9 +88,9 @@ const products = [
 */
 
 //CODE HERE
-// products.map(function(elem, ind, arr){
-//   price -= (price * .25)
-// })
+let saleProducts = products.map(function(){
+  return products.price -= (products.price * .25)
+})
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -137,7 +139,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let helensInfo = Object.assign({}, contactInfo, shippingInfo)
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -146,14 +148,14 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let ellensInfo = {...helensInfo, name: 'Ellen'}
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
-
+let {email} = ellensInfo
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
@@ -161,7 +163,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const {state} = shippingInfo
+const {zipCode} = shippingInfo
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
   Use the userInfo object below to complete problems 9-11.
@@ -223,7 +226,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+// userInfo.settings.alerts = shouldAlert 
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -231,7 +234,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+// userInfo.topics.push('topic below')
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -258,7 +261,7 @@ const userInfo = {
 */
 
 //CODE HERE
-let person = {
+const person = {
   name: 'Josh',
   age: 29,
   jobs: ['warrior', 'healer', 'tank'],
