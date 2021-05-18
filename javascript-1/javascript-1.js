@@ -21,6 +21,7 @@ let myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+const foundZ = nestedLetters[5][2][1]
 // let foundZ = nestedLetters.forEach(function(elem){
 //     elem.forEach(function(elem2){
 //       console.log(elem2)
@@ -179,12 +180,13 @@ const classes = [
 
 //CODE HERE
 for (let i = 0; i < classes.length; i++){
-    for (let key in classes){
-        if (classes[key] === true){
-            classes[key] = false
+    for (let key in classes[i]){
+        if(classes[i][key] === true){
+            classes[i][key] = false
         }
     }
 }
+// console.log(classes)
 
 
   
@@ -202,6 +204,13 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+for (let i = 0; i < lettersToPair.length; i++) {
+    for(let j = 0; j < lettersToPair.length; j++) {
+        if(j>i){
+            lettersToPair[i]===lettersToPair[j] ? pairsArray.push([i,j]):null;
+        }
+    }
+}
 // for (let i = 0; i < lettersToPair.length; i++){
 //     lettersToPair.push()
 // }
