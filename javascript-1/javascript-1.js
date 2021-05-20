@@ -217,9 +217,8 @@ for (let i = 0; i < lettersToPair.length; i++) {
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
-/*
-    Problems 12-14 are all going to build off of problem 11. 
-*/
+
+    //! Problems 12-14 are all going to build off of problem 11. 
 
 
 ////////////////////PROBLEM 11////////////////////
@@ -230,13 +229,18 @@ for (let i = 0; i < lettersToPair.length; i++) {
 */
 
 //CODE HERE
-function Dog(name, age, breed, tricks) {
-   this.name = name
-   this.age = age
-   this.breed = breed
-   this.tricks = tricks
+// function Dog(name, age, breed, tricks) {
+//    this.name = name
+//    this.age = age
+//    this.breed = breed
+//    this.tricks = tricks
+// }
+function Dog(name, age, breed, tricks){
+    this.name = name
+    this.age = age 
+    this.breed = breed
+    this.tricks = tricks
 }
-
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
     'Jack Russell' for the breed, and an array containing the strings 'sit' and 'shake'.
@@ -254,7 +258,11 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
 */
 
 //CODE HERE
-function bark (){
+// function bark (){
+//     return `${this.name} says bark!`
+// }
+
+function bark(){
     return `${this.name} says bark!`
 }
 
@@ -264,21 +272,26 @@ function bark (){
 */
 
 //CODE HERE
-let fidoSpeaks = bark.call(fido)
+// let fidoSpeaks = bark.call(fido)
   
 ////////////////////PROBLEM 13////////////////////
+let fidoSpeak = bark.call(fido)
+
 /*
     Write a function called 'teachTrick' that will take in one parameter, trick, 
     and push that trick into a trick's array and return the updated array.
     You will give context to 'techTrick' using the .bind method.
     Tricks will come from that context, so you should reference 'this.tricks' to access the correct array.
 */
-
-//CODE HERE
 function teachTrick(trick){
-    this.trick = trick
-    trick.push()
+    this.tricks.push(trick)
+    return this.tricks
 }
+//CODE HERE
+// function teachTrick(trick){
+//     this.trick = trick
+//     trick.push()
+// }
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -295,22 +308,24 @@ function teachTrick(trick){
     You will give context to 'dogIntro' using the .apply method.
     Remember to use the 'this' keyword to access values from the context that you will apply.
 */
-
-//CODE HERE
 function dogIntro(treat, toy){
-    this.treat = treat
-    this.toy = toy
-    return `${this.name} is a ${this.breed} that loves ${this.treats} and their ${this.toy}`
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
 }
+//CODE HERE
+// function dogIntro(treat, toy){
+//     this.treat = treat
+//     this.toy = toy
+//     return `${this.name} is a ${this.breed} that loves ${this.treats} and their ${this.toy}`
+// }
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
     with 'chicken' as the treat and 'tennis ball' as the toy
     and save the result to a variable called fidoIntro.
 */
-
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
 //CODE HERE
-  let fidoIntro = dogIntro.apply(fido, 'chicken', 'tennis ball')
+//   let fidoIntro = dogIntro.apply(fido, 'chicken', 'tennis ball')
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -356,6 +371,7 @@ function Phone(brand, model, storage, color, sold){
 
 //CODE HERE
   Phone.prototype.sell = function(){
+      this.sold = true
       return `${this.brand} ${this.model} has been sold.`
   }
   phone1.sell()
